@@ -1,0 +1,7 @@
+flask
+flask-sqlalchemy
+psycopg2
+flask-script
+geoalchemy2
+flask-migrate
+geojson
