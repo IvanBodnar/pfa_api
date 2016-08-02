@@ -23,7 +23,7 @@ class Consultas:
         return FeatureCollection(features)
 
     def consulta_prueba(self):
-        consulta = self.make_geojson(self.pfa.query.limit(20))
+        consulta = self.make_geojson(self.pfa.query.all())
         return consulta
 
     def consulta_mes(self, mes):
