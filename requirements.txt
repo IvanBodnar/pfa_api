@@ -5,3 +5,4 @@ flask-script
 geoalchemy2
 flask-migrate
 geojson
+gunicorn
