@@ -8,6 +8,6 @@ def mk():
     local('git add --all :/ && git commit')
     local('git push')
     run('sudo service nginx stop')
-    run('cd /apps/pfa_api && source/venv/bin/activate')
+    run('cd apps/pfa_api && source/venv/bin/activate')
     run('git pull origin master')
     run('sudo service nginx start')
