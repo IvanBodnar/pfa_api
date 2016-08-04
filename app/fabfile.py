@@ -9,6 +9,6 @@ def mk():
     local('git push')
     run('sudo service nginx stop')
     run('cd apps/pfa_api')
-    run('source venv/bin/activate')
-    run('git pull origin master')
+    with prefix('source bin/activate'):
+        run('git pull origin master')
     run('sudo service nginx start')
