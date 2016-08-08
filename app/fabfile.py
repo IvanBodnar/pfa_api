@@ -7,8 +7,15 @@ env.password = 'pared111'
 def mk():
     local('git add --all :/ && git commit')
     local('git push')
+
+
+def virt():
+    with prefix('source apps/pfa_api/bin/activate'):
+        yield
+
+def dep():
     run('sudo service nginx stop')
-    run('cd apps/pfa_api')
-    with prefix('source bin/activate'):
+    run('source apps/pfa_api/venv/bin/activate')
+    with cd('apps/pfa_api'):
         run('git pull origin master')
     run('sudo service nginx start')
