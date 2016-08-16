@@ -3,6 +3,7 @@ from flask import jsonify
 from api.consultas import Consultas
 from api.models import Hechos
 
+# PRUEBA FABRICCCC
 
 consultas = Consultas(Hechos())
 
